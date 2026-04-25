@@ -313,3 +313,407 @@ button, input, select, textarea { font: inherit; }
   .topbar { flex-direction: column; align-items: flex-start; }
   .admin-profile-card { flex-direction: column; align-items: flex-start; }
 }
+
+/* Formulário completo em etapas */
+.full-form-card { overflow: hidden; }
+.form-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.form-current-club {
+  min-width: 250px;
+  padding: 16px;
+  border: 1px solid #e9d5ff;
+  border-radius: 16px;
+  background: #faf7ff;
+}
+.form-current-club span,
+.form-current-club small { display: block; color: var(--muted); }
+.form-current-club strong { display: block; margin: 5px 0; color: var(--primary-dark); }
+.form-progress-wrap { margin: 16px 0 18px; }
+.form-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+.form-progress-info strong { color: var(--text); }
+.step-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0 22px;
+}
+.step-tab {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+}
+.step-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.step-tab.done {
+  background: #ecfdf5;
+  border-color: #86efac;
+  color: #166534;
+}
+.form-step-panel {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 22px;
+  background: #fff;
+}
+.step-panel-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+.step-panel-header h3 { margin: 6px 0; font-size: 1.35rem; }
+.step-panel-header p { margin: 0; color: var(--muted); line-height: 1.6; }
+.form-grid,
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.form-field {
+  display: grid;
+  gap: 8px;
+}
+.form-field > span,
+.radio-group > span,
+.checkbox-group > span {
+  font-weight: 800;
+  color: #374151;
+}
+.form-field b { color: var(--danger); }
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 13px 14px;
+  background: #fff;
+  color: var(--text);
+}
+.form-field textarea { resize: vertical; min-height: 92px; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(111,45,189,.12);
+}
+.radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.radio-options label,
+.checkbox-grid label,
+.disease-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #f9fafb;
+  cursor: pointer;
+}
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.disease-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.disease-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  background: #f9fafb;
+}
+.disease-row > span { font-weight: 800; }
+.condition-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #fbfbfd;
+}
+.mt-18 { margin-top: 18px; }
+.terms-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  margin-top: 18px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+.terms-box input { margin-top: 4px; }
+.review-box {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px dashed var(--border);
+  background: #f9fafb;
+}
+.review-content { margin-top: 14px; }
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+.review-list div {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+.review-list dt { font-weight: 800; color: var(--muted); font-size: .86rem; }
+.review-list dd { margin: 5px 0 0; font-weight: 700; }
+.form-actions-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+.is-hidden { display: none !important; }
+.note.error { color: var(--danger); font-weight: 700; }
+.note.success { color: var(--ok); font-weight: 700; }
+
+@media (max-width: 980px) {
+  .form-intro,
+  .form-progress-info { flex-direction: column; align-items: flex-start; }
+  .form-current-club { width: 100%; min-width: 0; }
+  .form-grid,
+  .conditions-grid,
+  .disease-list,
+  .checkbox-grid,
+  .review-list { grid-template-columns: 1fr; }
+  .disease-row { grid-template-columns: 1fr; align-items: stretch; }
+  .form-actions-footer { flex-direction: column; }
+}
+
+/* Ajustes de máscaras, CEP, revisão completa e campos condicionais */
+.field-hint {
+  display: block;
+  margin-top: 6px;
+  color: #667085;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+.cep-search-btn {
+  align-self: end;
+  min-height: 48px;
+  margin-bottom: 0;
+}
+.cep-note {
+  margin-top: 14px;
+}
+.professional-extra-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  grid-column: 1 / -1;
+}
+.professional-extra-fields.is-hidden {
+  display: none !important;
+}
+.review-content {
+  margin-top: 18px;
+  display: grid;
+  gap: 16px;
+}
+.review-section {
+  border: 1px solid #e6dafc;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+}
+.review-section h4 {
+  margin: 0 0 12px;
+  color: #4b148c;
+}
+.review-section .review-list {
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .professional-extra-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Google profile menu on public home */
+.google-account-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.google-login-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.google-login-button:hover,
+.google-profile-button:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 18px rgba(111,45,189,.12);
+  transform: translateY(-1px);
+}
+
+.google-icon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: #4285f4;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.google-profile {
+  position: relative;
+}
+
+.google-profile-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 6px 10px 6px 6px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.google-profile-button img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(111,45,189,.18);
+}
+
+.profile-chevron {
+  color: var(--primary);
+  font-size: .95rem;
+  font-weight: 900;
+}
+
+.google-profile-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 50;
+  width: 260px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, .16);
+  padding: 10px;
+  text-align: left;
+}
+
+.google-profile-info {
+  padding: 10px 12px 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.google-profile-info strong,
+.google-profile-info span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.google-profile-info strong {
+  color: var(--text);
+  font-size: .95rem;
+}
+
+.google-profile-info span {
+  color: var(--muted);
+  font-size: .84rem;
+  margin-top: 3px;
+}
+
+.google-profile-menu button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 11px 12px;
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.google-profile-menu button:hover {
+  background: rgba(111,45,189,.08);
+  color: var(--primary-dark);
+}
+
+@media (max-width: 700px) {
+  .google-account-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .google-login-button {
+    width: 100%;
+    justify-content: center;
+  }
+  .google-profile-menu {
+    left: 0;
+    right: auto;
+    width: min(280px, calc(100vw - 48px));
+  }
+}
